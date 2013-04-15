@@ -20,13 +20,13 @@
 - (IBAction)switchCamera:(id)sender;
 - (IBAction)switchFlash:(id)sender;
 
-@property (strong, nonatomic) IBOutlet UIButton *switchFlashBtn;
 @property (nonatomic) UIImagePickerController *imagePickerController;
-@property (strong, nonatomic) IBOutlet UIButton *switchCameraBtn;
-@property (nonatomic) IBOutlet UIToolbar *bottomBar;
-@property (nonatomic) IBOutlet UIBarButtonItem *chooseFromGalleryBtn;
-@property (nonatomic) IBOutlet UIBarButtonItem *cancelBtn;
-@property (nonatomic) IBOutlet UIBarButtonItem *takeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *switchFlashBtn;
+@property (weak, nonatomic) IBOutlet UIButton *switchCameraBtn;
+@property (weak, nonatomic) IBOutlet UIToolbar *bottomBar;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *chooseFromGalleryBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *takeBtn;
 @end
 
 

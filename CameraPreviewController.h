@@ -12,7 +12,7 @@
 
 @interface CameraPreviewController : UIViewController
 
-@property (nonatomic) UIImage *image;
+@property (nonatomic, copy) UIImage *image;
 @property (nonatomic, weak) id<CameraPreviewControllerDelegate> delegate;
 @end
 

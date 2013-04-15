@@ -17,12 +17,12 @@
 - (IBAction)done:(id)sender;
 - (IBAction)retake:(id)sender;
 
-@property (nonatomic) IBOutlet UIBarButtonItem *doneBtn;
-@property (nonatomic) IBOutlet UIBarButtonItem *retakeBtn;
-@property (nonatomic) IBOutlet UIBarButtonItem *titleBtn;
-@property (nonatomic) IBOutlet UIToolbar *bottomBar;
 @property (nonatomic) UIImageView *imageView;
-@property (nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *retakeBtn;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *titleBtn;
+@property (weak, nonatomic) IBOutlet UIToolbar *bottomBar;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
 
 
