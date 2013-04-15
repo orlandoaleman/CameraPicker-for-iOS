@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		5323EC8711C933D20094367E /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 5323EC8111C933D20094367E /* Default.png */; };
+		5323EC8811C933D20094367E /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 5323EC8211C933D20094367E /* Icon-Small.png */; };
+		5323EC8911C933D20094367E /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5323EC8311C933D20094367E /* Icon-Small@2x.png */; };
+		5323EC8A11C933D20094367E /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5323EC8411C933D20094367E /* Icon.png */; };
+		5323EC8B11C933D20094367E /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5323EC8511C933D20094367E /* Icon@2x.png */; };
+		5341DF981098E39E0034B175 /* CameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5341DF971098E39E0034B175 /* CameraPickerController.m */; };
+		535EB62111D253E0000A58C3 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 535EB62011D253E0000A58C3 /* iTunesArtwork */; };
+		5363CC1D1003C330006CE070 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363CC1B1003C330006CE070 /* MainViewController.m */; };
+		5363CC231003C33D006CE070 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363CC1F1003C33D006CE070 /* main.m */; };
+		5363CC261003C342006CE070 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5363CC251003C342006CE070 /* AppDelegate.m */; };
+		8B09DCF0171BEF52001E418B /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B09DCEF171BEF52001E418B /* CameraViewController.xib */; };
+		8B09DCF6171C10E7001E418B /* CameraPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B09DCF4171C10E5001E418B /* CameraPreviewController.m */; };
+		8B09DCF7171C10E7001E418B /* CameraPreviewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B09DCF5171C10E6001E418B /* CameraPreviewController.xib */; };
+		8B09DCFC171C4F4C001E418B /* UIScrollView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B09DCFB171C4F4C001E418B /* UIScrollView+Extras.m */; };
+		8B5EDD0C171C9E63004CD663 /* camera-flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5EDD08171C9E63004CD663 /* camera-flash.png */; };
+		8B5EDD0D171C9E63004CD663 /* camera-flash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5EDD09171C9E63004CD663 /* camera-flash@2x.png */; };
+		8B5EDD0E171C9E63004CD663 /* camera-flashoff.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5EDD0A171C9E63004CD663 /* camera-flashoff.png */; };
+		8B5EDD0F171C9E63004CD663 /* camera-flashoff@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5EDD0B171C9E63004CD663 /* camera-flashoff@2x.png */; };
+		8B5EDD12171CA344004CD663 /* camera-flashauto.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5EDD10171CA344004CD663 /* camera-flashauto.png */; };
+		8B5EDD13171CA344004CD663 /* camera-flashauto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B5EDD11171CA344004CD663 /* camera-flashauto@2x.png */; };
+		8B5EDD1A171CA9FA004CD663 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5EDD19171CA9FA004CD663 /* UIImage+Extras.m */; };
+		8B693024171C6E13009A356A /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B693023171C6E13009A356A /* MainWindow.xib */; };
+		8B693030171C7EB7009A356A /* camera-switch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B69302F171C7EB7009A356A /* camera-switch@2x.png */; };
+		8B693032171C7EC3009A356A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B693031171C7EC3009A356A /* Default-568h@2x.png */; };
+		8B693034171C7F1C009A356A /* camera-switch.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B693033171C7F1C009A356A /* camera-switch.png */; };
+		8B69303B171C8A8A009A356A /* camera-take.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B693039171C8A89009A356A /* camera-take.png */; };
+		8B69303C171C8A8A009A356A /* camera-take@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B69303A171C8A89009A356A /* camera-take@2x.png */; };
+		8B69303F171C8BF9009A356A /* camera-gallery.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B69303D171C8BF9009A356A /* camera-gallery.png */; };
+		8B693040171C8BF9009A356A /* camera-gallery@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B69303E171C8BF9009A356A /* camera-gallery@2x.png */; };
+		8B693043171C8C1E009A356A /* camera-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B693041171C8C1D009A356A /* camera-close.png */; };
+		8B693044171C8C1E009A356A /* camera-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B693042171C8C1E009A356A /* camera-close@2x.png */; };
+		8B69304B171C90F5009A356A /* camera-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B693049171C90F5009A356A /* camera-icon.png */; };
+		8B69304C171C90F5009A356A /* camera-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B69304A171C90F5009A356A /* camera-icon@2x.png */; };
+		8B693050171C92D4009A356A /* UIBarButtonItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B69304F171C92D4009A356A /* UIBarButtonItem+Custom.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* CameraPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5323EC8111C933D20094367E /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		5323EC8211C933D20094367E /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		5323EC8311C933D20094367E /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		5323EC8411C933D20094367E /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		5323EC8511C933D20094367E /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		5341DF961098E39E0034B175 /* CameraPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPickerController.h; sourceTree = "<group>"; };
+		5341DF971098E39E0034B175 /* CameraPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPickerController.m; sourceTree = "<group>"; };
+		535EB62011D253E0000A58C3 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
+		5363CC1B1003C330006CE070 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5363CC1C1003C330006CE070 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5363CC1F1003C33D006CE070 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5363CC201003C33D006CE070 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		5363CC241003C342006CE070 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5363CC251003C342006CE070 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8B09DCEF171BEF52001E418B /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		8B09DCF3171C10E5001E418B /* CameraPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPreviewController.h; sourceTree = "<group>"; };
+		8B09DCF4171C10E5001E418B /* CameraPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPreviewController.m; sourceTree = "<group>"; };
+		8B09DCF5171C10E6001E418B /* CameraPreviewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPreviewController.xib; sourceTree = "<group>"; };
+		8B09DCFA171C4F4C001E418B /* UIScrollView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extras.h"; sourceTree = "<group>"; };
+		8B09DCFB171C4F4C001E418B /* UIScrollView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extras.m"; sourceTree = "<group>"; };
+		8B5EDD08171C9E63004CD663 /* camera-flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-flash.png"; path = "images/camera-flash.png"; sourceTree = "<group>"; };
+		8B5EDD09171C9E63004CD663 /* camera-flash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-flash@2x.png"; path = "images/camera-flash@2x.png"; sourceTree = "<group>"; };
+		8B5EDD0A171C9E63004CD663 /* camera-flashoff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-flashoff.png"; path = "images/camera-flashoff.png"; sourceTree = "<group>"; };
+		8B5EDD0B171C9E63004CD663 /* camera-flashoff@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-flashoff@2x.png"; path = "images/camera-flashoff@2x.png"; sourceTree = "<group>"; };
+		8B5EDD10171CA344004CD663 /* camera-flashauto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-flashauto.png"; path = "images/camera-flashauto.png"; sourceTree = "<group>"; };
+		8B5EDD11171CA344004CD663 /* camera-flashauto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-flashauto@2x.png"; path = "images/camera-flashauto@2x.png"; sourceTree = "<group>"; };
+		8B5EDD18171CA9FA004CD663 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
+		8B5EDD19171CA9FA004CD663 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
+		8B693023171C6E13009A356A /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		8B69302F171C7EB7009A356A /* camera-switch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-switch@2x.png"; path = "images/camera-switch@2x.png"; sourceTree = "<group>"; };
+		8B693031171C7EC3009A356A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		8B693033171C7F1C009A356A /* camera-switch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-switch.png"; path = "images/camera-switch.png"; sourceTree = "<group>"; };
+		8B693039171C8A89009A356A /* camera-take.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-take.png"; path = "images/camera-take.png"; sourceTree = "<group>"; };
+		8B69303A171C8A89009A356A /* camera-take@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-take@2x.png"; path = "images/camera-take@2x.png"; sourceTree = "<group>"; };
+		8B69303D171C8BF9009A356A /* camera-gallery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-gallery.png"; path = "images/camera-gallery.png"; sourceTree = "<group>"; };
+		8B69303E171C8BF9009A356A /* camera-gallery@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-gallery@2x.png"; path = "images/camera-gallery@2x.png"; sourceTree = "<group>"; };
+		8B693041171C8C1D009A356A /* camera-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-close.png"; path = "images/camera-close.png"; sourceTree = "<group>"; };
+		8B693042171C8C1E009A356A /* camera-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-close@2x.png"; path = "images/camera-close@2x.png"; sourceTree = "<group>"; };
+		8B693049171C90F5009A356A /* camera-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon.png"; path = "../DLCImagePickerController/Images/UI/camera-icon.png"; sourceTree = "<group>"; };
+		8B69304A171C90F5009A356A /* camera-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camera-icon@2x.png"; path = "../DLCImagePickerController/Images/UI/camera-icon@2x.png"; sourceTree = "<group>"; };
+		8B69304E171C92D4009A356A /* UIBarButtonItem+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Custom.h"; sourceTree = "<group>"; };
+		8B69304F171C92D4009A356A /* UIBarButtonItem+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Custom.m"; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* CameraPicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				8B09DCF8171C3F43001E418B /* CameraPicker */,
+				53AF8AEC0D9C50B700726DBA /* Demo */,
+				8B09DCFD171C4F53001E418B /* Lib */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5323EC8011C933D20094367E /* images */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5323EC8011C933D20094367E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8B693031171C7EC3009A356A /* Default-568h@2x.png */,
+				5323EC8111C933D20094367E /* Default.png */,
+				5323EC8211C933D20094367E /* Icon-Small.png */,
+				5323EC8311C933D20094367E /* Icon-Small@2x.png */,
+				5323EC8411C933D20094367E /* Icon.png */,
+				5323EC8511C933D20094367E /* Icon@2x.png */,
+				535EB62011D253E0000A58C3 /* iTunesArtwork */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		53AF8AEC0D9C50B700726DBA /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				5363CC241003C342006CE070 /* AppDelegate.h */,
+				5363CC251003C342006CE070 /* AppDelegate.m */,
+				5363CC1C1003C330006CE070 /* MainViewController.h */,
+				5363CC1B1003C330006CE070 /* MainViewController.m */,
+				8B693023171C6E13009A356A /* MainWindow.xib */,
+				5363CC201003C33D006CE070 /* Prefix.pch */,
+				5363CC1F1003C33D006CE070 /* main.m */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+			);
+			name = Demo;
+			sourceTree = "<group>";
+		};
+		8B09DCF8171C3F43001E418B /* CameraPicker */ = {
+			isa = PBXGroup;
+			children = (
+				8B693045171C8FE7009A356A /* images */,
+				5341DF961098E39E0034B175 /* CameraPickerController.h */,
+				5341DF971098E39E0034B175 /* CameraPickerController.m */,
+				8B09DCEF171BEF52001E418B /* CameraViewController.xib */,
+				8B09DCF3171C10E5001E418B /* CameraPreviewController.h */,
+				8B09DCF4171C10E5001E418B /* CameraPreviewController.m */,
+				8B09DCF5171C10E6001E418B /* CameraPreviewController.xib */,
+			);
+			name = CameraPicker;
+			sourceTree = "<group>";
+		};
+		8B09DCF9171C4F4C001E418B /* UIScrollView+Extras */ = {
+			isa = PBXGroup;
+			children = (
+				8B09DCFA171C4F4C001E418B /* UIScrollView+Extras.h */,
+				8B09DCFB171C4F4C001E418B /* UIScrollView+Extras.m */,
+			);
+			name = "UIScrollView+Extras";
+			path = "lib/UIScrollView+Extras";
+			sourceTree = "<group>";
+		};
+		8B09DCFD171C4F53001E418B /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				8B69304D171C92D4009A356A /* UIBarButtonItem+Custom */,
+				8B5EDD14171CA9C4004CD663 /* UIImage+Extras */,
+				8B09DCF9171C4F4C001E418B /* UIScrollView+Extras */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
+		8B5EDD14171CA9C4004CD663 /* UIImage+Extras */ = {
+			isa = PBXGroup;
+			children = (
+				8B5EDD18171CA9FA004CD663 /* UIImage+Extras.h */,
+				8B5EDD19171CA9FA004CD663 /* UIImage+Extras.m */,
+			);
+			name = "UIImage+Extras";
+			path = "lib/UIImage+Extras";
+			sourceTree = "<group>";
+		};
+		8B693045171C8FE7009A356A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				8B693041171C8C1D009A356A /* camera-close.png */,
+				8B693042171C8C1E009A356A /* camera-close@2x.png */,
+				8B693049171C90F5009A356A /* camera-icon.png */,
+				8B69304A171C90F5009A356A /* camera-icon@2x.png */,
+				8B5EDD08171C9E63004CD663 /* camera-flash.png */,
+				8B5EDD09171C9E63004CD663 /* camera-flash@2x.png */,
+				8B5EDD10171CA344004CD663 /* camera-flashauto.png */,
+				8B5EDD11171CA344004CD663 /* camera-flashauto@2x.png */,
+				8B5EDD0A171C9E63004CD663 /* camera-flashoff.png */,
+				8B5EDD0B171C9E63004CD663 /* camera-flashoff@2x.png */,
+				8B69303D171C8BF9009A356A /* camera-gallery.png */,
+				8B69303E171C8BF9009A356A /* camera-gallery@2x.png */,
+				8B693033171C7F1C009A356A /* camera-switch.png */,
+				8B69302F171C7EB7009A356A /* camera-switch@2x.png */,
+				8B693039171C8A89009A356A /* camera-take.png */,
+				8B69303A171C8A89009A356A /* camera-take@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		8B69304D171C92D4009A356A /* UIBarButtonItem+Custom */ = {
+			isa = PBXGroup;
+			children = (
+				8B69304E171C92D4009A356A /* UIBarButtonItem+Custom.h */,
+				8B69304F171C92D4009A356A /* UIBarButtonItem+Custom.m */,
+			);
+			name = "UIBarButtonItem+Custom";
+			path = "lib/UIBarButtonItem+Custom";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* CameraPicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CameraPicker" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CameraPicker;
+			productName = IBTest;
+			productReference = 1D6058910D05DD3D006BFB54 /* CameraPicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CameraPicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* CameraPicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5323EC8711C933D20094367E /* Default.png in Resources */,
+				5323EC8811C933D20094367E /* Icon-Small.png in Resources */,
+				5323EC8911C933D20094367E /* Icon-Small@2x.png in Resources */,
+				5323EC8A11C933D20094367E /* Icon.png in Resources */,
+				5323EC8B11C933D20094367E /* Icon@2x.png in Resources */,
+				535EB62111D253E0000A58C3 /* iTunesArtwork in Resources */,
+				8B09DCF0171BEF52001E418B /* CameraViewController.xib in Resources */,
+				8B09DCF7171C10E7001E418B /* CameraPreviewController.xib in Resources */,
+				8B693024171C6E13009A356A /* MainWindow.xib in Resources */,
+				8B693030171C7EB7009A356A /* camera-switch@2x.png in Resources */,
+				8B693032171C7EC3009A356A /* Default-568h@2x.png in Resources */,
+				8B693034171C7F1C009A356A /* camera-switch.png in Resources */,
+				8B69303B171C8A8A009A356A /* camera-take.png in Resources */,
+				8B69303C171C8A8A009A356A /* camera-take@2x.png in Resources */,
+				8B69303F171C8BF9009A356A /* camera-gallery.png in Resources */,
+				8B693040171C8BF9009A356A /* camera-gallery@2x.png in Resources */,
+				8B693043171C8C1E009A356A /* camera-close.png in Resources */,
+				8B693044171C8C1E009A356A /* camera-close@2x.png in Resources */,
+				8B69304B171C90F5009A356A /* camera-icon.png in Resources */,
+				8B69304C171C90F5009A356A /* camera-icon@2x.png in Resources */,
+				8B5EDD0C171C9E63004CD663 /* camera-flash.png in Resources */,
+				8B5EDD0D171C9E63004CD663 /* camera-flash@2x.png in Resources */,
+				8B5EDD0E171C9E63004CD663 /* camera-flashoff.png in Resources */,
+				8B5EDD0F171C9E63004CD663 /* camera-flashoff@2x.png in Resources */,
+				8B5EDD12171CA344004CD663 /* camera-flashauto.png in Resources */,
+				8B5EDD13171CA344004CD663 /* camera-flashauto@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5363CC1D1003C330006CE070 /* MainViewController.m in Sources */,
+				5363CC231003C33D006CE070 /* main.m in Sources */,
+				5363CC261003C342006CE070 /* AppDelegate.m in Sources */,
+				5341DF981098E39E0034B175 /* CameraPickerController.m in Sources */,
+				8B09DCF6171C10E7001E418B /* CameraPreviewController.m in Sources */,
+				8B09DCFC171C4F4C001E418B /* UIScrollView+Extras.m in Sources */,
+				8B693050171C92D4009A356A /* UIBarButtonItem+Custom.m in Sources */,
+				8B5EDD1A171CA9FA004CD663 /* UIImage+Extras.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = CameraPicker;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prefix.pch;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = CameraPicker;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				RUN_CLANG_STATIC_ANALYZER = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CameraPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CameraPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
