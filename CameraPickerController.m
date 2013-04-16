@@ -90,7 +90,7 @@
                 image = [UIImage imageNamed:@"camera-flashoff"];
                 break;
         }
-        self.switchFlashBtn.imageView.image = image;
+        [self.switchFlashBtn setImage:image forState:UIControlStateNormal];
     }
 }
 
@@ -115,6 +115,7 @@
                            options:UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionTransitionFlipFromLeft
                         animations:^{
                             self.imagePickerController.cameraDevice = nextDevice;
+                            [self refreshFlashModeButton];
                         } completion:NULL];
     }
 }
@@ -158,9 +159,8 @@
     lastPhotoMediaInfo_ = info;
     
     CameraPreviewController *previewVC = [[CameraPreviewController alloc] init];
-    previewVC.image = [lastPhotoMediaInfo_[UIImagePickerControllerOriginalImage] fixOrientation];
+    previewVC.image = info[UIImagePickerControllerOriginalImage];
     previewVC.delegate = self;
-    
     [self.imagePickerController pushViewController:previewVC animated:YES];
 }
 

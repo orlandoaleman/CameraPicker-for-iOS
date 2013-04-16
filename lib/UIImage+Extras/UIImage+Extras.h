@@ -1,18 +1,12 @@
-//
-//
-// -----------------------------------------------
-// From cscade on iphonedevbook.com forums
-// And Bjorn Sallarp on blog.sallarp.com
-// -----------------------------------------------
-//
+#import "UIImage+AlphaAdditions.h"
+#import "UIImage+ResizeAdditions.h"
+#import "UIImage+RoundedCornerAdditions.h"
 
-@interface UIImage (Extras)
 
+@interface UIImage (Misc)
 + (UIImage *)imageWithColor:(UIColor *)color;
-
 - (UIImage *)imageByScalingAndCroppingForSize:(CGSize)targetSize;
 
 /// Set the image orientation to portrait
 - (UIImage *)fixOrientation;
-
 @end

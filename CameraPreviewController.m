@@ -8,6 +8,7 @@
 
 #import "CameraPreviewController.h"
 #import "UIScrollView+Extras.h"
+#import "UIImage+Extras.h"
 
 
 @interface CameraPreviewController () {
@@ -67,13 +68,18 @@
         return;
     }
     
-    self.imageView.image = self.image;
-    CGSize imageSize = self.image.size;
+    CGRect scrollFrame = self.scrollView.bounds;
+
+    UIImage *image = [self.image resizedImageWithContentMode:UIViewContentModeScaleAspectFit
+                                         bounds:scrollFrame.size
+                                        interpolationQuality:kCGInterpolationMedium];
+
+    self.imageView.image = image;
+    CGSize imageSize = image.size;
     self.imageView.frame = CGRectMake(0.0, 0.0, imageSize.width, imageSize.height);
     self.scrollView.contentSize = imageSize;
 
     // Ajuste de escala
-    CGRect scrollFrame = self.scrollView.bounds;
     
     CGFloat widthRatio = scrollFrame.size.width / imageSize.width;
     CGFloat heightRatio = scrollFrame.size.height / imageSize.height;
@@ -87,14 +93,7 @@
 
 #pragma mark - Setters, getters
 
-- (void)setImage:(UIImage *)image
-{
-    _image = image;
-    if (self.isViewLoaded) {
-        [self refreshView];
-    }
-}
-
+              
 
 #pragma mark - Actions
 
