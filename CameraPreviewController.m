@@ -53,18 +53,6 @@
 }
 
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-
-- (void)viewWillDissappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-
 - (void)createView
 {
     self.imageView = [[UIImageView alloc] init];

@@ -53,7 +53,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     self.imagePickerController = [[UIImagePickerController alloc] init];
     self.imagePickerController.delegate = self;
     self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -64,22 +64,31 @@
     
     CGRect viewFrame = self.view.frame;
     CGRect cameraViewFrame = viewFrame;
-    
+
     self.imagePickerController.view.frame = cameraViewFrame;
     [self.view addSubview:self.imagePickerController.view];
-    
+
     [self.view bringSubviewToFront:self.bottomBar];
     [self.view bringSubviewToFront:self.switchCameraBtn];
     [self.view bringSubviewToFront:self.switchFlashBtn];
-    
+
     [self refreshFlashModeButton];
 }
 
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+
+    // Desactivo el ocultado de la barra de estado
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
+}
 
 - (void)refreshFlashModeButton
 {
     BOOL flashAvailable = [UIImagePickerController isFlashAvailableForCameraDevice:self.imagePickerController.cameraDevice];
     self.switchFlashBtn.hidden = !flashAvailable;
+    
     
     if (flashAvailable) {
         UIImagePickerControllerCameraFlashMode flashMode = self.imagePickerController.cameraFlashMode;
@@ -156,6 +165,8 @@
 }
 
 
+#pragma mark - UIImagePickerController
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     lastPhotoMediaInfo_ = info;
@@ -163,6 +174,7 @@
     CameraPreviewController *previewVC = [[CameraPreviewController alloc] init];
     previewVC.image = [lastPhotoMediaInfo_[UIImagePickerControllerOriginalImage] fixOrientation];
     previewVC.delegate = self;
+
     [self.navigationController pushViewController:previewVC animated:YES];
 }
 

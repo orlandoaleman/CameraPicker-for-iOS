@@ -20,6 +20,17 @@
 @implementation MainViewController
 
 
+#pragma mark - View lifecycle
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // Fixes an issue on iPhone when displaying an image picker that takes an image from the camera.
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
+}
+
+
 #pragma mark - CameraViewController delegate
 
 - (void)cameraViewController:(CameraViewController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info
@@ -34,7 +45,6 @@
 - (void)cameraViewControllerDidCancel:(CameraViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:^{
-
     }];
 }
 
