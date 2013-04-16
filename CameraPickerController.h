@@ -11,23 +11,18 @@
 #import "UIBarButtonItem+Custom.h"
 
 
-@protocol CameraViewControllerDelegate;
+@protocol CameraPickerControllerDelegate;
 
-@interface CameraViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CameraPreviewControllerDelegate>
+@interface CameraPickerController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CameraPreviewControllerDelegate>
 
-@property (nonatomic, readonly) UIImagePickerController *imagePickerController;
-@property (nonatomic, weak) id <CameraViewControllerDelegate> delegate;
+@property (readonly) UIImagePickerController *imagePickerController;
+@property (nonatomic, weak) id <CameraPickerControllerDelegate> delegate;
 @end
 
 
-@protocol CameraViewControllerDelegate
-- (void)cameraViewController:(CameraViewController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info;
-- (void)cameraViewControllerDidCancel:(CameraViewController *)controller;
-- (void)cameraControllerWantsGallery:(CameraViewController *)controller;
+@protocol CameraPickerControllerDelegate
+- (void)cameraPickerController:(CameraPickerController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info;
+- (void)cameraPickerControllerDidCancel:(CameraPickerController *)controller;
+- (void)cameraPickerControllerWantsGallery:(CameraPickerController *)controller;
 @end
 
-
-
-@interface CameraPickerController : UINavigationController
-@property (nonatomic, weak) CameraViewController *cameraViewController;
-@end

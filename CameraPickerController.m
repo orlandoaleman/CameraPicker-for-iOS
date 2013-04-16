@@ -10,9 +10,11 @@
 #import "UIImage+Extras.h"
 
 
-@interface CameraViewController () {
+@interface CameraPickerController () {
     NSDictionary *lastPhotoMediaInfo_;
 }
+
+- (void)setup;
 
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)cancelCamera:(id)sender;
@@ -21,6 +23,7 @@
 - (IBAction)switchFlash:(id)sender;
 
 @property (nonatomic) UIImagePickerController *imagePickerController;
+
 @property (weak, nonatomic) IBOutlet UIButton *switchFlashBtn;
 @property (weak, nonatomic) IBOutlet UIButton *switchCameraBtn;
 @property (weak, nonatomic) IBOutlet UIToolbar *bottomBar;
@@ -30,21 +33,25 @@
 @end
 
 
-
-
-@implementation CameraViewController
+@implementation CameraPickerController
 
 - (id)init
 {
     if (self = [super initWithNibName:@"CameraViewController" bundle:nil]) {
+        _imagePickerController = [[UIImagePickerController alloc] init];
+        [self setup];
     }
     return self;
 }
 
 
-- (void)didReceiveMemoryWarning
+- (void)setup
 {
-    [super didReceiveMemoryWarning];
+    self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+    self.imagePickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
+    self.imagePickerController.showsCameraControls = NO;
+    self.imagePickerController.delegate = self;
+    [self.imagePickerController.cameraOverlayView addSubview:self.view];
 }
 
 
@@ -53,36 +60,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.imagePickerController = [[UIImagePickerController alloc] init];
-    self.imagePickerController.delegate = self;
-    self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-    self.imagePickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
-    self.imagePickerController.showsCameraControls = NO;
+    
+    CGRect viewFrame = self.imagePickerController.view.frame;
+    self.imagePickerController.view.frame = viewFrame;
     
     [self.takeBtn customViewButtonWithImage:@"camera-take"];
-    
-    CGRect viewFrame = self.view.frame;
-    CGRect cameraViewFrame = viewFrame;
-
-    self.imagePickerController.view.frame = cameraViewFrame;
-    [self.view addSubview:self.imagePickerController.view];
-
-    [self.view bringSubviewToFront:self.bottomBar];
-    [self.view bringSubviewToFront:self.switchCameraBtn];
-    [self.view bringSubviewToFront:self.switchFlashBtn];
-
     [self refreshFlashModeButton];
 }
 
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:YES];
-
-    // Desactivo el ocultado de la barra de estado
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
-}
 
 - (void)refreshFlashModeButton
 {
@@ -114,22 +99,23 @@
 
 - (void)chooseFromGallery:(id)sender
 {
-    [self.delegate cameraControllerWantsGallery:self];
+    [self.delegate cameraPickerControllerWantsGallery:self];
 }
+
 
 - (IBAction)switchCamera:(id)sender
 {
     UIImagePickerControllerCameraDevice currentDevice = self.imagePickerController.cameraDevice;
     UIImagePickerControllerCameraDevice nextDevice = currentDevice == UIImagePickerControllerCameraDeviceRear ? UIImagePickerControllerCameraDeviceFront : UIImagePickerControllerCameraDeviceRear;
-
+    
     if ([UIImagePickerController isCameraDeviceAvailable:nextDevice]) {
         // Animated switch between rear and front camera
         [UIView transitionWithView:self.imagePickerController.view
                           duration:1.0
                            options:UIViewAnimationOptionAllowAnimatedContent | UIViewAnimationOptionTransitionFlipFromLeft
                         animations:^{
-            self.imagePickerController.cameraDevice = nextDevice;
-        } completion:NULL];
+                            self.imagePickerController.cameraDevice = nextDevice;
+                        } completion:NULL];
     }
 }
 
@@ -155,7 +141,7 @@
 
 - (void)cancelCamera:(id)sender
 {
-    [self.delegate cameraViewControllerDidCancel:self];
+    [self.delegate cameraPickerControllerDidCancel:self];
 }
 
 
@@ -170,12 +156,12 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     lastPhotoMediaInfo_ = info;
-
+    
     CameraPreviewController *previewVC = [[CameraPreviewController alloc] init];
     previewVC.image = [lastPhotoMediaInfo_[UIImagePickerControllerOriginalImage] fixOrientation];
     previewVC.delegate = self;
-
-    [self.navigationController pushViewController:previewVC animated:YES];
+    
+    [self.imagePickerController pushViewController:previewVC animated:YES];
 }
 
 
@@ -183,36 +169,15 @@
 
 - (void)cameraPreviewControllerWantsRetake:(CameraPreviewController *)controller
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.imagePickerController popViewControllerAnimated:YES];
 }
 
 
 - (void)cameraPreviewControllerDidFinish:(CameraPreviewController *)picker
 {
-    [self.delegate cameraViewController:self didFinishWithPhotoWithInfo:lastPhotoMediaInfo_];
+    [self.delegate cameraPickerController:self didFinishWithPhotoWithInfo:lastPhotoMediaInfo_];
     lastPhotoMediaInfo_ = nil;
 }
 
-@end
-
-
-
-@implementation CameraPickerController
-
-- (id)init
-{
-    self = [super initWithRootViewController:[[CameraViewController alloc] init]];
-    if (self) {
-        _cameraViewController = self.viewControllers[0];
-    }
-    return self;
-}
-
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    self.navigationBarHidden = YES;
-}
 
 @end

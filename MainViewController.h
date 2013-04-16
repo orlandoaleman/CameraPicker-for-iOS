@@ -10,6 +10,6 @@
 #import "CameraPickerController.h"
 
 
-@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CameraViewControllerDelegate>
+@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CameraPickerControllerDelegate>
 
 @end

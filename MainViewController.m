@@ -8,7 +8,9 @@
 
 #import "MainViewController.h"
 
-@interface MainViewController ()
+@interface MainViewController () {
+    CameraPickerController *cameraPickerController_;
+}
 - (IBAction)takePhotoFromCamera;
 - (IBAction)takePhotoFromSavedPhotosAlbum;
 
@@ -20,20 +22,9 @@
 @implementation MainViewController
 
 
-#pragma mark - View lifecycle
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    // Fixes an issue on iPhone when displaying an image picker that takes an image from the camera.
-    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-}
-
-
 #pragma mark - CameraViewController delegate
 
-- (void)cameraViewController:(CameraViewController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info
+- (void)cameraPickerController:(CameraPickerController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info
 {
     [self dismissViewControllerAnimated:YES completion:^{
         [controller.navigationController popToRootViewControllerAnimated:NO];
@@ -42,14 +33,14 @@
 }
 
 
-- (void)cameraViewControllerDidCancel:(CameraViewController *)controller
+- (void)cameraPickerControllerDidCancel:(CameraPickerController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:^{
     }];
 }
 
 
-- (void)cameraControllerWantsGallery:(CameraViewController *)controller
+- (void)cameraPickerControllerWantsGallery:(CameraPickerController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:^{
         [self takePhotoFromSavedPhotosAlbum];
@@ -72,9 +63,9 @@
 
 - (IBAction)takePhotoFromCamera
 {
-    CameraPickerController *cameraPickerController = [[CameraPickerController alloc] init];
-    cameraPickerController.cameraViewController.delegate = self;
-    [self presentViewController:cameraPickerController animated:YES completion:NULL];
+    cameraPickerController_ = [[CameraPickerController alloc] init];
+    cameraPickerController_.delegate = self;
+    [self presentViewController:cameraPickerController_.imagePickerController animated:YES completion:NULL];
 }
 
 
