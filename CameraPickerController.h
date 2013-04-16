@@ -15,7 +15,7 @@
 
 @interface CameraPickerController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CameraPreviewControllerDelegate>
 
-@property (readonly) UIImagePickerController *imagePickerController;
+- (UIImagePickerController *)imagePickerController;
 @property (nonatomic, weak) id <CameraPickerControllerDelegate> delegate;
 @end
 
