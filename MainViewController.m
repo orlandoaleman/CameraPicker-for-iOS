@@ -48,6 +48,22 @@
 }
 
 
+#pragma mark - UIImagePickerController delegate
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    self.imageView.image = [info valueForKey:UIImagePickerControllerOriginalImage];
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
+
 #pragma mark - Actions
 
 - (void)showImagePicker
@@ -61,7 +77,7 @@
 }
 
 
-- (IBAction)takePhotoFromCamera
+- (void)takePhotoFromCamera
 {
     cameraPickerController_ = [[CameraPickerController alloc] init];
     cameraPickerController_.delegate = self;
@@ -76,21 +92,5 @@
     photoPicker.delegate = self;
     [self presentViewController:photoPicker animated:YES completion:NULL];
 }
-
-
-#pragma mark - UIImagePickerController delegate
-
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-{
-    self.imageView.image = [info valueForKey:UIImagePickerControllerOriginalImage];    
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
-
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
-{
-    [self dismissViewControllerAnimated:YES completion:NULL];
-}
-
 
 @end
