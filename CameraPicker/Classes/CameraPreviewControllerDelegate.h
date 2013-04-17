@@ -1,5 +1,5 @@
 //
-//  CameraPreviewController
+//  CameraPreviewControllerDelegate
 //  CameraPicker
 //
 //  Created by Orlando Aleman Ortiz on 15/04/13.
@@ -8,14 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CameraPreviewControllerDelegate;
+@class CameraPreviewController;
 
-@interface CameraPreviewController : UIViewController
-
-@property (nonatomic, copy) UIImage *image;
-@property (nonatomic, weak) id<CameraPreviewControllerDelegate> delegate;
-
-@end
 
 @protocol CameraPreviewControllerDelegate <NSObject>
 - (void)cameraPreviewControllerWantsRetake:(CameraPreviewController *)controller;

@@ -7,6 +7,7 @@
 //
 
 #import "CameraPickerController.h"
+#import "UIBarButtonItem+Custom.h"
 #import "UIImage+Extras.h"
 
 
