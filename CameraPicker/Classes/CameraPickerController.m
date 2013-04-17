@@ -37,7 +37,7 @@
 
 - (id)init
 {
-    if (self = [super initWithNibName:@"CameraViewController" bundle:nil]) {
+    if (self = [super initWithNibName:@"CameraView" bundle:nil]) {
         _imagePickerController = [[UIImagePickerController alloc] init];
         [self setup];
     }

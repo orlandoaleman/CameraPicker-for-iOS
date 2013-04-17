@@ -31,7 +31,7 @@
 
 - (id)init
 {
-    self = [super initWithNibName:@"CameraPreviewController" bundle:nil];
+    self = [super initWithNibName:@"CameraPreviewView" bundle:nil];
     if (self) {
         // Custom initialization
     }
