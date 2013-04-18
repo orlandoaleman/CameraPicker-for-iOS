@@ -85,6 +85,12 @@
 }
 
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.chooseFromGalleryBtn.enabled = [self.delegate respondsToSelector:@selector(cameraPickerControllerWantsGallery:)];
+}
+
+
 - (void)refreshFlashModeButton
 {
     BOOL flashAvailable = [UIImagePickerController isFlashAvailableForCameraDevice:self.imagePickerController.cameraDevice];

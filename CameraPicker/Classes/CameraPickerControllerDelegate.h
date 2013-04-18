@@ -12,9 +12,12 @@
 @class CameraPickerController;
 
 
-@protocol CameraPickerControllerDelegate
+@protocol CameraPickerControllerDelegate <NSObject>
 - (void)cameraPickerController:(CameraPickerController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info;
 - (void)cameraPickerControllerDidCancel:(CameraPickerController *)controller;
+
+@optional
 - (void)cameraPickerControllerWantsGallery:(CameraPickerController *)controller;
+
 @end
 
