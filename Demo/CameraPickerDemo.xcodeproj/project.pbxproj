@@ -47,6 +47,8 @@
 		8B4DC800171EA31200C13765 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F7171EA31200C13765 /* UIImage+ResizeAdditions.m */; };
 		8B4DC801171EA31200C13765 /* UIImage+RoundedCornerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F9171EA31200C13765 /* UIImage+RoundedCornerAdditions.m */; };
 		8B4DC802171EA31200C13765 /* UIScrollView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7FC171EA31200C13765 /* UIScrollView+Extras.m */; };
+		8B596F4D171F433F00A7A127 /* focus-crosshair@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B596F4C171F433F00A7A127 /* focus-crosshair@2x.png */; };
+		8B596F4F171F434800A7A127 /* focus-crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B596F4E171F434800A7A127 /* focus-crosshair.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +105,8 @@
 		8B4DC7F9171EA31200C13765 /* UIImage+RoundedCornerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCornerAdditions.m"; sourceTree = "<group>"; };
 		8B4DC7FB171EA31200C13765 /* UIScrollView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extras.h"; sourceTree = "<group>"; };
 		8B4DC7FC171EA31200C13765 /* UIScrollView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extras.m"; sourceTree = "<group>"; };
+		8B596F4C171F433F00A7A127 /* focus-crosshair@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "focus-crosshair@2x.png"; sourceTree = "<group>"; };
+		8B596F4E171F434800A7A127 /* focus-crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "focus-crosshair.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				8B4DC7EC171EA2CB00C13765 /* Demo */,
-				8B4DC7ED171EA31200C13765 /* Lib */,
 				8B4DC79E171EA28300C13765 /* CameraPicker */,
+				8B4DC7ED171EA31200C13765 /* Lib */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -199,6 +203,8 @@
 				8B4DC7B7171EA28400C13765 /* camera-switch@2x.png */,
 				8B4DC7B8171EA28400C13765 /* camera-take.png */,
 				8B4DC7B9171EA28400C13765 /* camera-take@2x.png */,
+				8B596F4E171F434800A7A127 /* focus-crosshair.png */,
+				8B596F4C171F433F00A7A127 /* focus-crosshair@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -364,6 +370,8 @@
 				8B4DC7E9171EA2B800C13765 /* Icon.png in Resources */,
 				8B4DC7EA171EA2B800C13765 /* Icon@2x.png in Resources */,
 				8B4DC7EB171EA2B800C13765 /* iTunesArtwork in Resources */,
+				8B596F4D171F433F00A7A127 /* focus-crosshair@2x.png in Resources */,
+				8B596F4F171F434800A7A127 /* focus-crosshair.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

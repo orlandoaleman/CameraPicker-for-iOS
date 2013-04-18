@@ -13,7 +13,7 @@
 
 @protocol CameraPickerControllerDelegate;
 
-@interface CameraPickerController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, CameraPreviewControllerDelegate>
+@interface CameraPickerController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIGestureRecognizerDelegate, CameraPreviewControllerDelegate>
 
 - (UIImagePickerController *)imagePickerController;
 @property (nonatomic, weak) id <CameraPickerControllerDelegate> delegate;
