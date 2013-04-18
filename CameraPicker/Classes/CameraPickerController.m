@@ -13,6 +13,7 @@
 
 @interface CameraPickerController () {
     NSDictionary *lastPhotoMediaInfo_;
+    BOOL isTouchDown_;
 }
 
 - (void)setup;
@@ -66,9 +67,10 @@
     CGRect viewFrame = self.imagePickerController.view.frame;
     self.imagePickerController.view.frame = viewFrame;
   
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    recognizer.minimumPressDuration = 0;
     recognizer.cancelsTouchesInView = NO;
-    recognizer.numberOfTapsRequired = 1;
+    recognizer.numberOfTapsRequired = 0;
     recognizer.numberOfTouchesRequired = 1;
     recognizer.delegate = self;
     [self.view addGestureRecognizer:recognizer];
@@ -197,6 +199,7 @@
 
 #pragma mark - UIGestureRecognizer
 
+
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
 {
     if ([touch.view isEqual:self.view]) {
@@ -206,32 +209,53 @@
 }
 
 
-- (void)handleTap:(UITapGestureRecognizer *)recognizer
-{
-  CGPoint touchPoint = [recognizer locationInView:self.view];
-  
-  CGSize originalSize = self.focusView.frame.size;
-  self.focusView.frame = CGRectMake(touchPoint.x, touchPoint.y, originalSize.width, originalSize.height);
-  self.focusView.transform = CGAffineTransformMakeScale(1.50, 1.50);
-  
-  [UIView animateWithDuration:0.5
-                        delay:0
-                      options:UIViewAnimationCurveEaseOut
-                   animations:^{
-                     self.focusView.alpha = 1;
-                     self.focusView.transform = CGAffineTransformIdentity;
-                   }
-                   completion:^(BOOL finished) {
-                     if (!finished) return;
-                     [UIView animateWithDuration:0.1
-                                           delay:0.0
-                                         options:UIViewAnimationCurveEaseIn
-                                      animations:^{
-                                        [UIView setAnimationRepeatCount:2];
-                                        self.focusView.alpha = 0;
-                                      }
-                                      completion:NULL];
-                   }];
+- (void)handleTap:(UILongPressGestureRecognizer *)recognizer
+{    
+    CGPoint touchPoint = [recognizer locationInView:self.view];
+    CGSize originalSize = self.focusView.frame.size;
+    
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        isTouchDown_ = YES;
+        self.focusView.alpha = 0;
+        self.focusView.frame = CGRectMake(touchPoint.x - 0.5*originalSize.width,
+                                          touchPoint.y - 0.5*originalSize.height,
+                                          originalSize.height,
+                                          originalSize.height);
+        self.focusView.transform = CGAffineTransformMakeScale(2.0, 2.0);
+        
+        [UIView animateWithDuration:0.5
+                              delay:0
+                            options:UIViewAnimationCurveEaseOut
+                         animations:^{
+                             self.focusView.alpha = 1;
+                             self.focusView.transform = CGAffineTransformIdentity;
+                         }
+                         completion:^(BOOL finished) {
+                             [self doBlinkAnimationWithDelay:0];
+                         }];
+    }
+    else if (recognizer.state == UIGestureRecognizerStateEnded) {
+        isTouchDown_ = NO;
+    }
 }
+
+
+- (void)doBlinkAnimationWithDelay:(CGFloat)delay
+{
+    self.focusView.alpha = 1;     
+    [UIView animateWithDuration:0.2
+                          delay:delay
+                        options:UIViewAnimationCurveEaseIn
+                     animations:^{
+                         [UIView setAnimationRepeatCount:2];
+                         self.focusView.alpha = 0;
+                     }
+                     completion:^(BOOL finished) {
+                         if (isTouchDown_) {
+                             [self doBlinkAnimationWithDelay:0.0];
+                         }
+                     }];
+}
+
 
 @end
