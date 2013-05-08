@@ -42,7 +42,7 @@
 						<reference key="NSNextResponder" ref="223000409"/>
 						<int key="NSvFlags">268</int>
 						<array class="NSMutableArray" key="NSSubviews"/>
-						<string key="NSFrameSize">{320, 426}</string>
+						<string key="NSFrameSize">{320, 514}</string>
 						<reference key="NSSuperview" ref="223000409"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="460394616"/>
@@ -53,7 +53,7 @@
 						</object>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
-						<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics" id="950963454">
+						<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
 							<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
 							<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
 								<bool key="EncodedWithXMLCoder">YES</bool>
@@ -75,7 +75,7 @@
 					<object class="IBUIToolbar" id="460394616">
 						<reference key="NSNextResponder" ref="223000409"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{0, 426}, {320, 54}}</string>
+						<string key="NSFrame">{{0, 514}, {320, 54}}</string>
 						<reference key="NSSuperview" ref="223000409"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -120,12 +120,28 @@
 						</array>
 					</object>
 				</array>
-				<string key="NSFrameSize">{320, 480}</string>
+				<string key="NSFrameSize">{320, 568}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="903952188"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
-				<reference key="IBUISimulatedDestinationMetrics" ref="950963454"/>
+				<object class="IBUIScreenMetrics" key="IBUISimulatedDestinationMetrics">
+					<string key="IBUISimulatedSizeMetricsClass">IBUIScreenMetrics</string>
+					<object class="NSMutableDictionary" key="IBUINormalizedOrientationToSizeMap">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<array key="dict.sortedKeys">
+							<integer value="1"/>
+							<integer value="3"/>
+						</array>
+						<array key="dict.values">
+							<string>{320, 568}</string>
+							<string>{568, 320}</string>
+						</array>
+					</object>
+					<string key="IBUITargetRuntime">IBCocoaTouchFramework</string>
+					<string key="IBUIDisplayName">Retina 4 Full Screen</string>
+					<int key="IBUIType">2</int>
+				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</array>
