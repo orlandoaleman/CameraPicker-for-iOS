@@ -72,9 +72,6 @@
     CGRect viewFrame = self.imagePickerController.view.frame;
     self.imagePickerController.view.frame = viewFrame;
     [self.imagePickerController.cameraOverlayView addSubview:self.view];
-    
-
-    self.chooseFromGalleryBtn.enabled = [self.delegate respondsToSelector:@selector(cameraPickerControllerWantsGallery:)];
 
     [self.takeBtn customViewButtonWithImage:@"camera-take"];
 
@@ -94,9 +91,13 @@
     self.focusView = [[UIImageView alloc] initWithImage:image];
     self.focusView.alpha = 0;
     [self.view addSubview:self.focusView];
+}
 
-    
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    self.chooseFromGalleryBtn.enabled = [self.delegate respondsToSelector:@selector(cameraPickerControllerWantsGallery:)];
 }
 
 

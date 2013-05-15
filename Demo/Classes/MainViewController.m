@@ -22,7 +22,7 @@
 @implementation MainViewController
 
 
-#pragma mark - CameraViewController delegate
+#pragma mark - CameraPickerController delegate
 
 - (void)cameraPickerController:(CameraPickerController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info
 {
