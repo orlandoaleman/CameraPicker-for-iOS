@@ -38,11 +38,12 @@
 
 @implementation CameraPickerController
 
+
 - (id)init
 {
-    if (self = [super initWithNibName:@"CameraView" bundle:nil]) {
-        _imagePickerController = [[UIImagePickerController alloc] init];
+    if (self = [super initWithNibName:@"CameraPickerView" bundle:nil]) {
         [self setup];
+        [self view];
     }
     return self;
 }
@@ -50,11 +51,11 @@
 
 - (void)setup
 {
+    self.imagePickerController = [[UIImagePickerController alloc] init];
     self.imagePickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     self.imagePickerController.cameraCaptureMode = UIImagePickerControllerCameraCaptureModePhoto;
     self.imagePickerController.showsCameraControls = NO;
     self.imagePickerController.delegate = self;
-    [self.imagePickerController.cameraOverlayView addSubview:self.view];
 }
 
 
@@ -63,10 +64,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+
+    self.view.frame = [[UIScreen mainScreen] bounds];
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight;
+
     CGRect viewFrame = self.imagePickerController.view.frame;
     self.imagePickerController.view.frame = viewFrame;
+    [self.imagePickerController.cameraOverlayView addSubview:self.view];
+    
+
+    self.chooseFromGalleryBtn.enabled = [self.delegate respondsToSelector:@selector(cameraPickerControllerWantsGallery:)];
+
+    [self.takeBtn customViewButtonWithImage:@"camera-take"];
+
+    [self refreshFlashModeButton];
   
+
     UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     recognizer.minimumPressDuration = 0;
     recognizer.cancelsTouchesInView = NO;
@@ -75,19 +89,14 @@
     recognizer.delegate = self;
     [self.view addGestureRecognizer:recognizer];
   
-    [self.takeBtn customViewButtonWithImage:@"camera-take"];
-    [self refreshFlashModeButton];
   
     UIImage *image = [UIImage imageNamed:@"focus-crosshair"];
     self.focusView = [[UIImageView alloc] initWithImage:image];
     self.focusView.alpha = 0;
     [self.view addSubview:self.focusView];
-}
 
+    
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    self.chooseFromGalleryBtn.enabled = [self.delegate respondsToSelector:@selector(cameraPickerControllerWantsGallery:)];
 }
 
 

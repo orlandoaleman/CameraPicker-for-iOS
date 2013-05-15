@@ -49,13 +49,19 @@
 
 - (void)createView
 {
+    self.view.frame = [[UIScreen mainScreen] bounds];
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight;
+    
+
     self.imageView = [[UIImageView alloc] init];
     self.imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.scrollView addSubview:self.imageView];
     
+
     self.titleBtn.title = NSLocalizedString(@"Preview", nil);
     self.doneBtn.title = NSLocalizedString(@"Use", nil);
     
+
     doubletapRecognizer_ = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapHandler)];
     doubletapRecognizer_.numberOfTapsRequired = 2;
     [self.scrollView addGestureRecognizer:doubletapRecognizer_];
@@ -79,8 +85,6 @@
     self.imageView.frame = CGRectMake(0.0, 0.0, imageSize.width, imageSize.height);
     self.scrollView.contentSize = imageSize;
 
-    // Ajuste de escala
-    
     CGFloat widthRatio = scrollFrame.size.width / imageSize.width;
     CGFloat heightRatio = scrollFrame.size.height / imageSize.height;
     CGFloat initialZoom = MIN(heightRatio, widthRatio);
@@ -90,10 +94,6 @@
     self.scrollView.zoomScale = initialZoom;
 }
 
-
-#pragma mark - Setters, getters
-
-              
 
 #pragma mark - Actions
 

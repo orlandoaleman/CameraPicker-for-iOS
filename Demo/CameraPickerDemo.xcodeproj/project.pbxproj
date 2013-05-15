@@ -13,7 +13,7 @@
 		8B4DC7BB171EA28400C13765 /* CameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A3171EA28300C13765 /* CameraPickerController.m */; };
 		8B4DC7BC171EA28400C13765 /* CameraPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A5171EA28300C13765 /* CameraPreviewController.m */; };
 		8B4DC7BD171EA28400C13765 /* CameraPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A7171EA28300C13765 /* CameraPreviewView.xib */; };
-		8B4DC7BE171EA28400C13765 /* CameraView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A8171EA28400C13765 /* CameraView.xib */; };
+		8B4DC7BE171EA28400C13765 /* CameraPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A8171EA28400C13765 /* CameraPickerView.xib */; };
 		8B4DC7BF171EA28400C13765 /* camera-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7AA171EA28400C13765 /* camera-close.png */; };
 		8B4DC7C0171EA28400C13765 /* camera-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7AB171EA28400C13765 /* camera-close@2x.png */; };
 		8B4DC7C1171EA28400C13765 /* camera-flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7AC171EA28400C13765 /* camera-flash.png */; };
@@ -61,7 +61,7 @@
 		8B4DC7A4171EA28300C13765 /* CameraPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPreviewController.h; sourceTree = "<group>"; };
 		8B4DC7A5171EA28300C13765 /* CameraPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPreviewController.m; sourceTree = "<group>"; };
 		8B4DC7A7171EA28300C13765 /* CameraPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPreviewView.xib; sourceTree = "<group>"; };
-		8B4DC7A8171EA28400C13765 /* CameraView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraView.xib; sourceTree = "<group>"; };
+		8B4DC7A8171EA28400C13765 /* CameraPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPickerView.xib; sourceTree = "<group>"; };
 		8B4DC7AA171EA28400C13765 /* camera-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-close.png"; sourceTree = "<group>"; };
 		8B4DC7AB171EA28400C13765 /* camera-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-close@2x.png"; sourceTree = "<group>"; };
 		8B4DC7AC171EA28400C13765 /* camera-flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-flash.png"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				8B4DC7A7171EA28300C13765 /* CameraPreviewView.xib */,
-				8B4DC7A8171EA28400C13765 /* CameraView.xib */,
+				8B4DC7A8171EA28400C13765 /* CameraPickerView.xib */,
 				8B4DC7A9171EA28400C13765 /* images */,
 			);
 			path = Resources;
@@ -345,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B4DC7BD171EA28400C13765 /* CameraPreviewView.xib in Resources */,
-				8B4DC7BE171EA28400C13765 /* CameraView.xib in Resources */,
+				8B4DC7BE171EA28400C13765 /* CameraPickerView.xib in Resources */,
 				8B4DC7BF171EA28400C13765 /* camera-close.png in Resources */,
 				8B4DC7C0171EA28400C13765 /* camera-close@2x.png in Resources */,
 				8B4DC7C1171EA28400C13765 /* camera-flash.png in Resources */,
