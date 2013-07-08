@@ -1,17 +1,17 @@
 //
-//  CameraPreviewController
-//  CameraPicker
+//  TTCameraPreviewController
+//  TTCameraPicker
 //
 //  Created by Orlando Aleman Ortiz on 15/04/13.
 //
 //
 
-#import "CameraPreviewController.h"
+#import "TTCameraPreviewController.h"
 #import "UIScrollView+Extras.h"
 #import "UIImage+Extras.h"
 
 
-@interface CameraPreviewController () {
+@interface TTCameraPreviewController () {
     UITapGestureRecognizer *doubletapRecognizer_;
 }
 
@@ -27,11 +27,11 @@
 @end
 
 
-@implementation CameraPreviewController
+@implementation TTCameraPreviewController
 
 - (id)init
 {
-    self = [super initWithNibName:@"CameraPreviewView" bundle:nil];
+    self = [super initWithNibName:@"TTCameraPreviewView" bundle:nil];
     if (self) {
         // Custom initialization
     }

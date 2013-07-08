@@ -1,17 +1,17 @@
 //
-//  CameraPickerController
-//  CameraPicker
+//  TTCameraPickerController
+//  TTCameraPicker
 //
 //  Created by Orlando Aleman Ortiz on 15/04/13.
 //
 //
 
-#import "CameraPickerController.h"
+#import "TTCameraPickerController.h"
 #import "UIBarButtonItem+Custom.h"
 #import "UIImage+Extras.h"
 
 
-@interface CameraPickerController () {
+@interface TTCameraPickerController () {
     NSDictionary *lastPhotoMediaInfo_;
     BOOL isTouchDown_;
 }
@@ -36,12 +36,12 @@
 @end
 
 
-@implementation CameraPickerController
+@implementation TTCameraPickerController
 
 
 - (id)init
 {
-    if (self = [super initWithNibName:@"CameraPickerView" bundle:nil]) {
+    if (self = [super initWithNibName:@"TTCameraPickerView" bundle:nil]) {
         [self setup];
         [self view];
     }
@@ -191,7 +191,7 @@
 {
     lastPhotoMediaInfo_ = info;
     
-    CameraPreviewController *previewVC = [[CameraPreviewController alloc] init];
+    TTCameraPreviewController *previewVC = [[TTCameraPreviewController alloc] init];
     previewVC.image = info[UIImagePickerControllerOriginalImage];
     previewVC.delegate = self;
     [self.imagePickerController pushViewController:previewVC animated:YES];
@@ -200,13 +200,13 @@
 
 #pragma mark - CameraPreviewController
 
-- (void)cameraPreviewControllerWantsRetake:(CameraPreviewController *)controller
+- (void)cameraPreviewControllerWantsRetake:(TTCameraPreviewController *)controller
 {
     [self.imagePickerController popViewControllerAnimated:YES];
 }
 
 
-- (void)cameraPreviewControllerDidFinish:(CameraPreviewController *)picker
+- (void)cameraPreviewControllerDidFinish:(TTCameraPreviewController *)picker
 {
     [self.delegate cameraPickerController:self didFinishWithPhotoWithInfo:lastPhotoMediaInfo_];
     lastPhotoMediaInfo_ = nil;

@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1552</int>
-		<string key="IBDocument.SystemVersion">12D78</string>
-		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
-		<string key="IBDocument.AppKitVersion">1187.37</string>
+		<string key="IBDocument.SystemVersion">12E55</string>
+		<string key="IBDocument.InterfaceBuilderVersion">4457.9</string>
+		<string key="IBDocument.AppKitVersion">1187.39</string>
 		<string key="IBDocument.HIToolboxVersion">626.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-			<string key="NS.object.0">2083</string>
+			<string key="NS.object.0">3682.9</string>
 		</object>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IBNSLayoutConstraint</string>
@@ -35,7 +35,7 @@
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="191373211">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIButton" id="591834419">
@@ -43,7 +43,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{239, 6}, {75, 35}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1064493499"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -71,8 +70,8 @@
 							<int key="type">2</int>
 							<double key="pointSize">15</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="521105105">
-							<string key="NSName">Helvetica-Bold</string>
+						<object class="NSFont" key="IBUIFont" id="243735192">
+							<string key="NSName">HelveticaNeue-Bold</string>
 							<double key="NSSize">15</double>
 							<int key="NSfFlags">16</int>
 						</object>
@@ -82,7 +81,6 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{6, 6}, {51, 35}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="591834419"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -104,14 +102,13 @@
 							<string key="NSResourceName">camera-flash.png</string>
 						</object>
 						<reference key="IBUIFontDescription" ref="492725437"/>
-						<reference key="IBUIFont" ref="521105105"/>
+						<reference key="IBUIFont" ref="243735192"/>
 					</object>
 					<object class="IBUIToolbar" id="1064493499">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
 						<string key="NSFrame">{{0, 514}, {320, 54}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIAutoresizesSubviews">NO</bool>
@@ -158,8 +155,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 568}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1067755665"/>
 				<reference key="IBUIBackgroundColor" ref="1031471498"/>
 				<bool key="IBUIOpaque">NO</bool>
@@ -319,9 +314,10 @@
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="191373211"/>
-								<int key="scoringType">8</int>
+								<int key="scoringType">0</int>
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="767507556">
 								<reference key="firstItem" ref="1064493499"/>
@@ -335,9 +331,10 @@
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="191373211"/>
-								<int key="scoringType">8</int>
+								<int key="scoringType">0</int>
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="794132246">
 								<reference key="firstItem" ref="1064493499"/>
@@ -351,9 +348,10 @@
 								</object>
 								<float key="priority">1000</float>
 								<reference key="containingView" ref="191373211"/>
-								<int key="scoringType">8</int>
+								<int key="scoringType">0</int>
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="626314487">
 								<reference key="firstItem" ref="591834419"/>
@@ -370,6 +368,7 @@
 								<int key="scoringType">6</int>
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="444369814">
 								<reference key="firstItem" ref="191373211"/>
@@ -386,6 +385,7 @@
 								<int key="scoringType">3</int>
 								<float key="scoringTypeFloat">9</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="880187204">
 								<reference key="firstItem" ref="591834419"/>
@@ -402,6 +402,7 @@
 								<int key="scoringType">9</int>
 								<float key="scoringTypeFloat">40</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="334492259">
 								<reference key="firstItem" ref="1067755665"/>
@@ -418,6 +419,7 @@
 								<int key="scoringType">9</int>
 								<float key="scoringTypeFloat">40</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<object class="IBNSLayoutConstraint" id="156252989">
 								<reference key="firstItem" ref="1067755665"/>
@@ -434,6 +436,7 @@
 								<int key="scoringType">9</int>
 								<float key="scoringTypeFloat">40</float>
 								<int key="contentType">3</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<reference ref="591834419"/>
 							<reference ref="1067755665"/>
@@ -478,6 +481,7 @@
 								<int key="scoringType">3</int>
 								<float key="scoringTypeFloat">9</float>
 								<int key="contentType">1</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 						</array>
 						<reference key="parent" ref="191373211"/>
@@ -524,6 +528,7 @@
 								<int key="scoringType">9</int>
 								<float key="scoringTypeFloat">40</float>
 								<int key="contentType">1</int>
+								<bool key="placeholder">NO</bool>
 							</object>
 							<reference ref="452578618"/>
 							<reference ref="78152261"/>
@@ -583,7 +588,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">CameraPickerController</string>
+				<string key="-1.CustomClassName">TTCameraPickerController</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -633,91 +638,13 @@
 			<nil key="sourceID"/>
 			<int key="maxID">248</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">CameraPickerController</string>
-					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="cancelCamera:">id</string>
-						<string key="chooseFromGallery:">id</string>
-						<string key="switchCamera:">id</string>
-						<string key="switchFlash:">id</string>
-						<string key="takePhoto:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="cancelCamera:">
-							<string key="name">cancelCamera:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="chooseFromGallery:">
-							<string key="name">chooseFromGallery:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="switchCamera:">
-							<string key="name">switchCamera:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="switchFlash:">
-							<string key="name">switchFlash:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="takePhoto:">
-							<string key="name">takePhoto:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="bottomBar">UIToolbar</string>
-						<string key="cancelBtn">UIBarButtonItem</string>
-						<string key="chooseFromGalleryBtn">UIBarButtonItem</string>
-						<string key="switchCameraBtn">UIButton</string>
-						<string key="switchFlashBtn">UIButton</string>
-						<string key="takeBtn">UIBarButtonItem</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="bottomBar">
-							<string key="name">bottomBar</string>
-							<string key="candidateClassName">UIToolbar</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="cancelBtn">
-							<string key="name">cancelBtn</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="chooseFromGalleryBtn">
-							<string key="name">chooseFromGalleryBtn</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="switchCameraBtn">
-							<string key="name">switchCameraBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="switchFlashBtn">
-							<string key="name">switchFlashBtn</string>
-							<string key="candidateClassName">UIButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="takeBtn">
-							<string key="name">takeBtn</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CameraPickerController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">NSLayoutConstraint</string>
-					<string key="superclassName">NSObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/NSLayoutConstraint.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
+		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDependencyDefaults">
+			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.iPhoneOS</string>
+			<real value="1552" key="NS.object.0"/>
+		</object>
 		<object class="NSMutableDictionary" key="IBDocument.PluginDeclaredDevelopmentDependencies">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaTouchPlugin.InterfaceBuilder3</string>
 			<real value="4600" key="NS.object.0"/>
@@ -732,6 +659,6 @@
 			<string key="camera-switch.png">{75, 35}</string>
 		</dictionary>
 		<bool key="IBDocument.UseAutolayout">YES</bool>
-		<string key="IBCocoaTouchPluginVersion">2083</string>
+		<string key="IBCocoaTouchPluginVersion">3682.9</string>
 	</data>
 </archive>
