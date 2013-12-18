@@ -19,9 +19,9 @@
 - (IBAction)retake:(id)sender;
 
 @property (nonatomic) UIImageView *imageView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneBtn;
+@property (weak, nonatomic) IBOutlet UIButton *doneBtn;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *retakeBtn;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *titleBtn;
+@property (weak, nonatomic) IBOutlet UIButton *titleBtn;
 @property (weak, nonatomic) IBOutlet UIToolbar *bottomBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @end
@@ -51,16 +51,13 @@
 {
     self.view.frame = [[UIScreen mainScreen] bounds];
     self.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleHeight;
-    
 
     self.imageView = [[UIImageView alloc] init];
     self.imageView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.scrollView addSubview:self.imageView];
-    
-
-    self.titleBtn.title = NSLocalizedString(@"Preview", nil);
-    self.doneBtn.title = NSLocalizedString(@"Use", nil);
-    
+        
+    [self.titleBtn setTitle:NSLocalizedString(@"Preview", nil) forState:UIControlStateNormal];
+    [self.doneBtn setTitle:NSLocalizedString(@"Use", nil) forState:UIControlStateNormal];
 
     doubletapRecognizer_ = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapHandler)];
     doubletapRecognizer_.numberOfTapsRequired = 2;
