@@ -1,9 +1,8 @@
 //
 //  UIBarButtonItem+Custom.m
-//  closett
 //
 //  Created by Orlando Aleman Ortiz on 12/04/13.
-//  Copyright (c) 2013 Closett. All rights reserved.
+//  Copyright (c) 2013. All rights reserved.
 //
 
 #import "UIBarButtonItem+Custom.h"

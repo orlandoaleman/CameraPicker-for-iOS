@@ -1,10 +1,10 @@
 //
 //  UIScrollView+Extras
-//  closett
 //
 //  Created by Orlando Aleman Ortiz on 05/02/13.
-//  Copyright (c) 2013 Closett. All rights reserved.
+//  Copyright (c) 2013. All rights reserved.
 //
+
 
 #import "UIScrollView+Extras.h"
 
