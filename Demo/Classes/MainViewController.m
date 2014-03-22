@@ -7,10 +7,14 @@
 //
 
 #import "MainViewController.h"
+#import "TTCameraPickerController.h"
+
 
 @interface MainViewController () {
-    CameraPickerController *cameraPickerController_;
+    TTCameraPickerController *cameraPickerController_;
 }
+
+- (IBAction)showImagePicker;
 - (IBAction)takePhotoFromCamera;
 - (IBAction)takePhotoFromSavedPhotosAlbum;
 
@@ -24,7 +28,7 @@
 
 #pragma mark - CameraPickerController delegate
 
-- (void)cameraPickerController:(CameraPickerController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info
+- (void)cameraPickerController:(TTCameraPickerController *)controller didFinishWithPhotoWithInfo:(NSDictionary *)info
 {
     [self dismissViewControllerAnimated:YES completion:^{
         [controller.navigationController popToRootViewControllerAnimated:NO];
@@ -33,14 +37,14 @@
 }
 
 
-- (void)cameraPickerControllerDidCancel:(CameraPickerController *)controller
+- (void)cameraPickerControllerDidCancel:(TTCameraPickerController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:^{
     }];
 }
 
 
-- (void)cameraPickerControllerWantsGallery:(CameraPickerController *)controller
+- (void)cameraPickerControllerWantsGallery:(TTCameraPickerController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:^{
         [self takePhotoFromSavedPhotosAlbum];
@@ -79,7 +83,7 @@
 
 - (void)takePhotoFromCamera
 {
-    cameraPickerController_ = [[CameraPickerController alloc] init];
+    cameraPickerController_ = [[TTCameraPickerController alloc] init];
     cameraPickerController_.delegate = self;
     [self presentViewController:cameraPickerController_.imagePickerController animated:YES completion:NULL];
 }

@@ -10,10 +10,11 @@
 		1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		8B4DC7BB171EA28400C13765 /* CameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A3171EA28300C13765 /* CameraPickerController.m */; };
-		8B4DC7BC171EA28400C13765 /* CameraPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A5171EA28300C13765 /* CameraPreviewController.m */; };
-		8B4DC7BD171EA28400C13765 /* CameraPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A7171EA28300C13765 /* CameraPreviewView.xib */; };
-		8B4DC7BE171EA28400C13765 /* CameraPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7A8171EA28400C13765 /* CameraPickerView.xib */; };
+		28591E6E14F94D5D9949A72D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C9C0DC0EA7548B699439E0E /* libPods.a */; };
+		5501F1E918DE3B8B00FC7FCC /* TTCameraPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5501F1E718DE3B8B00FC7FCC /* TTCameraPickerView.xib */; };
+		5501F1EA18DE3B8B00FC7FCC /* TTCameraPreviewView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5501F1E818DE3B8B00FC7FCC /* TTCameraPreviewView.xib */; };
+		5501F1F118DE3BA300FC7FCC /* TTCameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F1EC18DE3BA300FC7FCC /* TTCameraPickerController.m */; };
+		5501F1F218DE3BA300FC7FCC /* TTCameraPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5501F1EF18DE3BA300FC7FCC /* TTCameraPreviewController.m */; };
 		8B4DC7BF171EA28400C13765 /* camera-close.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7AA171EA28400C13765 /* camera-close.png */; };
 		8B4DC7C0171EA28400C13765 /* camera-close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7AB171EA28400C13765 /* camera-close@2x.png */; };
 		8B4DC7C1171EA28400C13765 /* camera-flash.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7AC171EA28400C13765 /* camera-flash.png */; };
@@ -42,10 +43,6 @@
 		8B4DC7EA171EA2B800C13765 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7DE171EA2B800C13765 /* Icon@2x.png */; };
 		8B4DC7EB171EA2B800C13765 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 8B4DC7DF171EA2B800C13765 /* iTunesArtwork */; };
 		8B4DC7FD171EA31200C13765 /* UIBarButtonItem+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F0171EA31200C13765 /* UIBarButtonItem+Custom.m */; };
-		8B4DC7FE171EA31200C13765 /* UIImage+AlphaAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F3171EA31200C13765 /* UIImage+AlphaAdditions.m */; };
-		8B4DC7FF171EA31200C13765 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F5171EA31200C13765 /* UIImage+Extras.m */; };
-		8B4DC800171EA31200C13765 /* UIImage+ResizeAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F7171EA31200C13765 /* UIImage+ResizeAdditions.m */; };
-		8B4DC801171EA31200C13765 /* UIImage+RoundedCornerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7F9171EA31200C13765 /* UIImage+RoundedCornerAdditions.m */; };
 		8B4DC802171EA31200C13765 /* UIScrollView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4DC7FC171EA31200C13765 /* UIScrollView+Extras.m */; };
 		8B596F4D171F433F00A7A127 /* focus-crosshair@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B596F4C171F433F00A7A127 /* focus-crosshair@2x.png */; };
 		8B596F4F171F434800A7A127 /* focus-crosshair.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B596F4E171F434800A7A127 /* focus-crosshair.png */; };
@@ -56,12 +53,15 @@
 		1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* CameraPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		8B4DC7A2171EA28300C13765 /* CameraPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPickerController.h; sourceTree = "<group>"; };
-		8B4DC7A3171EA28300C13765 /* CameraPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPickerController.m; sourceTree = "<group>"; };
-		8B4DC7A4171EA28300C13765 /* CameraPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraPreviewController.h; sourceTree = "<group>"; };
-		8B4DC7A5171EA28300C13765 /* CameraPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraPreviewController.m; sourceTree = "<group>"; };
-		8B4DC7A7171EA28300C13765 /* CameraPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPreviewView.xib; sourceTree = "<group>"; };
-		8B4DC7A8171EA28400C13765 /* CameraPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraPickerView.xib; sourceTree = "<group>"; };
+		4C9C0DC0EA7548B699439E0E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5501F1E718DE3B8B00FC7FCC /* TTCameraPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTCameraPickerView.xib; sourceTree = "<group>"; };
+		5501F1E818DE3B8B00FC7FCC /* TTCameraPreviewView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTCameraPreviewView.xib; sourceTree = "<group>"; };
+		5501F1EB18DE3BA300FC7FCC /* TTCameraPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCameraPickerController.h; sourceTree = "<group>"; };
+		5501F1EC18DE3BA300FC7FCC /* TTCameraPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCameraPickerController.m; sourceTree = "<group>"; };
+		5501F1ED18DE3BA300FC7FCC /* TTCameraPickerControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCameraPickerControllerDelegate.h; sourceTree = "<group>"; };
+		5501F1EE18DE3BA300FC7FCC /* TTCameraPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCameraPreviewController.h; sourceTree = "<group>"; };
+		5501F1EF18DE3BA300FC7FCC /* TTCameraPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCameraPreviewController.m; sourceTree = "<group>"; };
+		5501F1F018DE3BA300FC7FCC /* TTCameraPreviewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCameraPreviewControllerDelegate.h; sourceTree = "<group>"; };
 		8B4DC7AA171EA28400C13765 /* camera-close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-close.png"; sourceTree = "<group>"; };
 		8B4DC7AB171EA28400C13765 /* camera-close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-close@2x.png"; sourceTree = "<group>"; };
 		8B4DC7AC171EA28400C13765 /* camera-flash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera-flash.png"; sourceTree = "<group>"; };
@@ -95,18 +95,11 @@
 		8B4DC7DF171EA2B800C13765 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		8B4DC7EF171EA31200C13765 /* UIBarButtonItem+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Custom.h"; sourceTree = "<group>"; };
 		8B4DC7F0171EA31200C13765 /* UIBarButtonItem+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Custom.m"; sourceTree = "<group>"; };
-		8B4DC7F2171EA31200C13765 /* UIImage+AlphaAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AlphaAdditions.h"; sourceTree = "<group>"; };
-		8B4DC7F3171EA31200C13765 /* UIImage+AlphaAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AlphaAdditions.m"; sourceTree = "<group>"; };
-		8B4DC7F4171EA31200C13765 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
-		8B4DC7F5171EA31200C13765 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
-		8B4DC7F6171EA31200C13765 /* UIImage+ResizeAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ResizeAdditions.h"; sourceTree = "<group>"; };
-		8B4DC7F7171EA31200C13765 /* UIImage+ResizeAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ResizeAdditions.m"; sourceTree = "<group>"; };
-		8B4DC7F8171EA31200C13765 /* UIImage+RoundedCornerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCornerAdditions.h"; sourceTree = "<group>"; };
-		8B4DC7F9171EA31200C13765 /* UIImage+RoundedCornerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCornerAdditions.m"; sourceTree = "<group>"; };
 		8B4DC7FB171EA31200C13765 /* UIScrollView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Extras.h"; sourceTree = "<group>"; };
 		8B4DC7FC171EA31200C13765 /* UIScrollView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Extras.m"; sourceTree = "<group>"; };
 		8B596F4C171F433F00A7A127 /* focus-crosshair@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "focus-crosshair@2x.png"; sourceTree = "<group>"; };
 		8B596F4E171F434800A7A127 /* focus-crosshair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "focus-crosshair.png"; sourceTree = "<group>"; };
+		F36D0D99CF3540038C57D76A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +110,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				1D3623EC0D0F72F000981E51 /* CoreGraphics.framework in Frameworks */,
+				28591E6E14F94D5D9949A72D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +133,7 @@
 				8B4DC7ED171EA31200C13765 /* Lib */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				F36D0D99CF3540038C57D76A /* Pods.xcconfig */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -149,6 +144,7 @@
 				1D3623EB0D0F72F000981E51 /* CoreGraphics.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				4C9C0DC0EA7548B699439E0E /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -166,10 +162,12 @@
 		8B4DC79F171EA28300C13765 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8B4DC7A2171EA28300C13765 /* CameraPickerController.h */,
-				8B4DC7A3171EA28300C13765 /* CameraPickerController.m */,
-				8B4DC7A4171EA28300C13765 /* CameraPreviewController.h */,
-				8B4DC7A5171EA28300C13765 /* CameraPreviewController.m */,
+				5501F1EB18DE3BA300FC7FCC /* TTCameraPickerController.h */,
+				5501F1EC18DE3BA300FC7FCC /* TTCameraPickerController.m */,
+				5501F1ED18DE3BA300FC7FCC /* TTCameraPickerControllerDelegate.h */,
+				5501F1EE18DE3BA300FC7FCC /* TTCameraPreviewController.h */,
+				5501F1EF18DE3BA300FC7FCC /* TTCameraPreviewController.m */,
+				5501F1F018DE3BA300FC7FCC /* TTCameraPreviewControllerDelegate.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -177,8 +175,8 @@
 		8B4DC7A6171EA28300C13765 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8B4DC7A7171EA28300C13765 /* CameraPreviewView.xib */,
-				8B4DC7A8171EA28400C13765 /* CameraPickerView.xib */,
+				5501F1E718DE3B8B00FC7FCC /* TTCameraPickerView.xib */,
+				5501F1E818DE3B8B00FC7FCC /* TTCameraPreviewView.xib */,
 				8B4DC7A9171EA28400C13765 /* images */,
 			);
 			path = Resources;
@@ -251,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				8B4DC7EE171EA31200C13765 /* UIBarButtonItem+Custom */,
-				8B4DC7F1171EA31200C13765 /* UIImage+Extras */,
 				8B4DC7FA171EA31200C13765 /* UIScrollView+Extras */,
 			);
 			name = Lib;
@@ -265,21 +262,6 @@
 				8B4DC7F0171EA31200C13765 /* UIBarButtonItem+Custom.m */,
 			);
 			path = "UIBarButtonItem+Custom";
-			sourceTree = "<group>";
-		};
-		8B4DC7F1171EA31200C13765 /* UIImage+Extras */ = {
-			isa = PBXGroup;
-			children = (
-				8B4DC7F2171EA31200C13765 /* UIImage+AlphaAdditions.h */,
-				8B4DC7F3171EA31200C13765 /* UIImage+AlphaAdditions.m */,
-				8B4DC7F4171EA31200C13765 /* UIImage+Extras.h */,
-				8B4DC7F5171EA31200C13765 /* UIImage+Extras.m */,
-				8B4DC7F6171EA31200C13765 /* UIImage+ResizeAdditions.h */,
-				8B4DC7F7171EA31200C13765 /* UIImage+ResizeAdditions.m */,
-				8B4DC7F8171EA31200C13765 /* UIImage+RoundedCornerAdditions.h */,
-				8B4DC7F9171EA31200C13765 /* UIImage+RoundedCornerAdditions.m */,
-			);
-			path = "UIImage+Extras";
 			sourceTree = "<group>";
 		};
 		8B4DC7FA171EA31200C13765 /* UIScrollView+Extras */ = {
@@ -298,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "CameraPickerDemo" */;
 			buildPhases = (
+				2B666B4DE6EA4424A6BD16C3 /* Check Pods Manifest.lock */,
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				E0EAE8C456B3451A8FD9DCA4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,7 +301,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "CameraPickerDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -344,14 +328,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B4DC7BD171EA28400C13765 /* CameraPreviewView.xib in Resources */,
-				8B4DC7BE171EA28400C13765 /* CameraPickerView.xib in Resources */,
 				8B4DC7BF171EA28400C13765 /* camera-close.png in Resources */,
 				8B4DC7C0171EA28400C13765 /* camera-close@2x.png in Resources */,
 				8B4DC7C1171EA28400C13765 /* camera-flash.png in Resources */,
 				8B4DC7C2171EA28400C13765 /* camera-flash@2x.png in Resources */,
 				8B4DC7C3171EA28400C13765 /* camera-flashauto.png in Resources */,
 				8B4DC7C4171EA28400C13765 /* camera-flashauto@2x.png in Resources */,
+				5501F1EA18DE3B8B00FC7FCC /* TTCameraPreviewView.xib in Resources */,
+				5501F1E918DE3B8B00FC7FCC /* TTCameraPickerView.xib in Resources */,
 				8B4DC7C5171EA28400C13765 /* camera-flashoff.png in Resources */,
 				8B4DC7C6171EA28400C13765 /* camera-flashoff@2x.png in Resources */,
 				8B4DC7C7171EA28400C13765 /* camera-gallery.png in Resources */,
@@ -377,21 +361,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B666B4DE6EA4424A6BD16C3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E0EAE8C456B3451A8FD9DCA4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B4DC7BB171EA28400C13765 /* CameraPickerController.m in Sources */,
-				8B4DC7BC171EA28400C13765 /* CameraPreviewController.m in Sources */,
 				8B4DC7E0171EA2B800C13765 /* AppDelegate.m in Sources */,
 				8B4DC7E1171EA2B800C13765 /* MainViewController.m in Sources */,
 				8B4DC7E3171EA2B800C13765 /* main.m in Sources */,
 				8B4DC7FD171EA31200C13765 /* UIBarButtonItem+Custom.m in Sources */,
-				8B4DC7FE171EA31200C13765 /* UIImage+AlphaAdditions.m in Sources */,
-				8B4DC7FF171EA31200C13765 /* UIImage+Extras.m in Sources */,
-				8B4DC800171EA31200C13765 /* UIImage+ResizeAdditions.m in Sources */,
-				8B4DC801171EA31200C13765 /* UIImage+RoundedCornerAdditions.m in Sources */,
+				5501F1F118DE3BA300FC7FCC /* TTCameraPickerController.m in Sources */,
+				5501F1F218DE3BA300FC7FCC /* TTCameraPreviewController.m in Sources */,
 				8B4DC802171EA31200C13765 /* UIScrollView+Extras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,6 +414,7 @@
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36D0D99CF3540038C57D76A /* Pods.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -424,6 +438,7 @@
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36D0D99CF3540038C57D76A /* Pods.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -446,7 +461,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
@@ -460,6 +474,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
@@ -469,7 +484,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;

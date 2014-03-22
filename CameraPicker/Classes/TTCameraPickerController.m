@@ -8,7 +8,7 @@
 
 #import "TTCameraPickerController.h"
 #import "UIBarButtonItem+Custom.h"
-#import "UIImage+Extras.h"
+#import <UIImage+ResizeMagick.h>
 
 
 @interface TTCameraPickerController () {

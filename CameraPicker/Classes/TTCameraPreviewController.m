@@ -8,7 +8,7 @@
 
 #import "TTCameraPreviewController.h"
 #import "UIScrollView+Extras.h"
-#import "UIImage+Extras.h"
+#import <UIImage+ResizeMagick.h>
 
 
 @interface TTCameraPreviewController () {
@@ -73,9 +73,7 @@
     
     CGRect scrollFrame = self.scrollView.bounds;
 
-    UIImage *image = [self.image resizedImageWithContentMode:UIViewContentModeScaleAspectFit
-                                         bounds:scrollFrame.size
-                                        interpolationQuality:kCGInterpolationMedium];
+    UIImage *image = [self.image resizedImageWithMaximumSize:scrollFrame.size];
 
     self.imageView.image = image;
     CGSize imageSize = image.size;

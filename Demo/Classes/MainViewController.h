@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CameraPickerController.h"
+#import "TTCameraPickerControllerDelegate.h"
 
 
-@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, CameraPickerControllerDelegate>
+@interface MainViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, TTCameraPickerControllerDelegate>
 
 @end
