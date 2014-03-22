@@ -241,7 +241,7 @@
         
         [UIView animateWithDuration:0.5
                               delay:0
-                            options:UIViewAnimationCurveEaseOut
+                            options:UIViewAnimationOptionCurveEaseOut
                          animations:^{
                              self.focusView.alpha = 1;
                              self.focusView.transform = CGAffineTransformIdentity;
@@ -261,7 +261,7 @@
     self.focusView.alpha = 1;     
     [UIView animateWithDuration:0.2
                           delay:delay
-                        options:UIViewAnimationCurveEaseIn
+                        options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          [UIView setAnimationRepeatCount:2];
                          self.focusView.alpha = 0;
