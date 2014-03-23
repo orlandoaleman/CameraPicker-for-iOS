@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   }
   s.source       = { :git => "https://github.com/orlandoaleman/CameraPicker-for-iOS.git", :tag => "0.0.2" }
   s.source_files = 'lib/**/*.{h,m}', 'CameraPicker/Classes/*.{h,m}'
-  s.resources    = "CameraPicker/Resources"
+  s.resources    = "CameraPicker/Resources/*.xib", "CameraPicker/Resources/Images/*.png"
   s.frameworks   = 'Foundation,UIKit'  
   s.requires_arc = true
   s.dependency   'UIImage-ResizeMagick', '>= 0.0.1'
